@@ -1,4 +1,4 @@
-"""Version schemes for NiPreps projects
+"""Version schemes for NiPreps projects.
 
 NiPreps Version Schemes
 =======================
@@ -59,7 +59,7 @@ __all__ = ["nipreps_calver", "__version__"]
 
 
 def scheme(guess_next: Callable[[ScmVersion], str]) -> Callable[[ScmVersion], str]:
-    """Create a setuptools_scm version scheme from a calculator function"""
+    """Create a setuptools_scm version scheme from a calculator function."""
 
     @wraps(guess_next)
     def wrapper(version: ScmVersion) -> str:
@@ -72,7 +72,7 @@ def scheme(guess_next: Callable[[ScmVersion], str]) -> Callable[[ScmVersion], st
 
 @scheme
 def nipreps_calver(version: ScmVersion) -> str:
-    """Nipreps CalVer takes the form YY.MINOR.PATCH
+    """Nipreps CalVer takes the form YY.MINOR.PATCH.
 
     This is a Calendar Versioning scheme, where the major version is the
     last two digits of the year, and the minor and patch versions are

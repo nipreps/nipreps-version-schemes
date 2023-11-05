@@ -67,7 +67,7 @@ extend-select = [
   "C90",
   "I",
   "N",
-  # "D",  # pydocstyle
+  "D",  # pydocstyle
   "UP",
   "YTT",
   "ANN",  # annotations
@@ -105,3 +105,6 @@ extend-select = [
 
 [tool.ruff.lint.isort]
 known-first-party = ["nipreps_versions"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"

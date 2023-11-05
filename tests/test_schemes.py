@@ -1,3 +1,4 @@
+"""Tests for nipreps_versions."""
 from datetime import date
 from functools import partial
 
@@ -77,4 +78,5 @@ m = partial(meta, config=Configuration())
     ],
 )
 def test_nipreps_calver(version: ScmVersion, expected_next: str) -> None:
+    """Test expected version increments."""
     assert nipreps_calver(version) == expected_next
